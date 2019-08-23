@@ -3,11 +3,15 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue'
 import router from './router'
-import './assets/total.css'
+import VueResource from 'vue-resource'
+
+import jquery from 'jquery'
+window.jquery = window.$ = jquery
+
+Vue.use(VueResource)
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
-
 
 
 new Vue({

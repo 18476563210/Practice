@@ -1,0 +1,97 @@
+ul{list-style: none;}
+a{text-decoration: none;}
+*{margin: 0;padding: 0;}
+/* 容器 */
+	#product .container {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	/* 产品面包屑导航栏 */
+	#product .el-breadcrumb {
+		margin: 25px 0 10px;
+	}
+	/* 面包屑下的商品导航栏 */
+	#product .title {
+		line-height: 36px;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	#product .title .left{background: #ddd;color: #aaa;}
+	#product .title .listVal{margin-right: 40px;color: #1173bf;color: royalblue;font-size: 14px;cursor: pointer;}
+	#product .title .more span{background: #eee;padding: 3px 8px;font-size: 14px;border: 1px solid #ccc;cursor: pointer;}
+	#product .title div {
+		padding-left: 10px;
+	}
+	#product .title .selected{
+		background-color: transparent;
+		border: 0;
+	}
+	#product .title .selected li{
+		margin-right: 20px;
+		margin-top: 5px;
+		border: 1px solid #eee;
+	}
+	#product .el-menu--horizontal>.el-submenu .el-submenu__title{
+		height: 25px;
+		line-height: 25px;
+		padding: 0 5px;
+		border: none;
+	}
+	#product .el-menu--horizontal>.el-submenu .el-submenu__title:hover{
+		background-color: transparent;
+	}
+	.el-menu--popup{
+		min-width: 40px;
+	}
+	/* 产品列表开始 */
+	#product .productList{margin-top: 20px;}
+	/* 左侧栏开始 */
+	#product .productList .aside>p{margin-top: 10px;}
+	#product .productList .aside>p span{float: right;}
+	#product .productList .aside div{margin-top: 30px;}
+	#product .productList .aside div .price{color: red;font-size: 16px;font-weight: normal;line-height: 25px;}
+	#product .productList .aside div .shopName a{font-size: 12px;color: #666;}
+	#product .productList .aside div .evaluate{font-size: 12px;line-height: 26px;}
+	#product .productList .aside div .evaluate span{color: blue;}
+	/* 左侧栏结束 */
+	/* 右侧栏内容开始 */
+	#product .productList .shoplist .top{width: 100%;height: 40px;border: 1px solid #ccc;padding: 0 10px;box-sizing: border-box;font-size: 14px;}
+	#product .productList .shoplist .top ul{height: 40px;float: left;}
+	#product .productList .shoplist .top ul li{float: left;min-width: 40px;border: 1px solid #eee;padding: 2px 10px;margin-top: 6px;cursor: pointer;}
+	#product .productList .shoplist .top ul li.active{background: red;color: #fff;}
+	#product .productList .shoplist .top a{width:40px;height: 25px; margin-top: 6px;border:1px solid #ccc;text-align: center;font-size: 20px;float: right;}
+	#product .productList .shoplist .top .prev{background:#eee;}
+	#product .productList .shoplist .top .total{margin-top: 8px;margin-right: 100px;}
+	#product .productList .shoplist .bot{width: 100%;height: 42px;padding: 5px 10px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14px;}
+	#product .productList .shoplist .bot .address{float: left;line-height: 28px;}
+	#product .productList .shoplist .bot .address .sel{border: 1px solid #ccc;padding: 0 15px;height: 20px;line-height: 20px;margin: 0 20px;}
+	#product .productList .shoplist .bot .send{float: left;}
+	#product .productList .shoplist .bot .send li{float: left;line-height: 28px;}
+	#product .productList .shoplist .bot .search{float: right;border: 1px solid #ccc;}
+	#product .productList .shoplist .bot .search input{width: 150px;height: 25px;outline: none;border: none;padding-left: 10px;}
+	#product .productList .shoplist .bot .search a{display: inline-block;width: 40px;background: #ccc;padding: 5px;color: #fff;text-align: center;}
+	#product .productList .lists .listsContainer{padding: 20px;box-sizing: border-box;}
+	#product .productList .lists .content{min-height: 500px;margin: 10px 0;}
+	#product .productList .lists .content .price{color: red;font-size: 20px;font-weight: normal;line-height: 40px;margin-top: 20px;}
+	#product .productList .lists .content .shopName a{font-size: 12px;color: #666;}
+	#product .productList .lists .content .evaluate{font-size: 12px;}
+	#product .productList .lists .content .evaluate span{color: blue;line-height: 40px;}
+	#product .productList .lists .content .deal{font-size: 12px;border: 1px solid #ccc;padding: 5px;}
+	#product .productList .lists .content .deal span{color: firebrick;}
+	#product .productList .lists .content .deal img{float: right;}
+	/* 分页 */
+	#product .productList .pages{text-align: center;margin: 50px 0;}
+	#product .productList .pages button{border: 1px solid #eee;}
+	#product .productList .pages li{border: 1px solid #eee;}
+	#product .productList .pages li.active{background: #eee;color: #ccc;}
+	/* 分页下的小导航 */
+	#product .productList .bottom{width: 80%;height: 30px;line-height: 30px;font-size: 14px;border: 1px solid #eee;box-sizing: border-box;margin: 50px 10%;}
+	#product .productList .bottom ul li{float: left;}
+	#product .productList .bottom ul li a{padding: 0 15px;color: #CCCCCC;}
+	#product .productList .botSearch{width: 400px;border: 1px solid deeppink;margin-left: 300px;}
+	#product .productList .botSearch input{height: 35px;line-height: 35px;}
+	#product .productList .botSearch .el-input-group__append{border: 0;background: deeppink;color: #eee;}
+	/* 右侧栏内容结束 */
+	
+	
+	
