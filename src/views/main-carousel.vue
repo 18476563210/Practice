@@ -4,7 +4,7 @@
 		<div class="myCarousal">
 			<el-carousel :interval="5000" arrow="always" height="550px">
 				<el-carousel-item v-for="item in itemList" :key="item.id">
-					<img :src="item.carImg">
+					<img :src="item.imgPath">
 				</el-carousel-item>
 			</el-carousel>
 		</div>
@@ -133,19 +133,6 @@
 		</div>
 		<div class="floor4">
 			<div class="leftF6">
-				<!-- <div class="list">
-					<ul>
-						<li>导航</li>
-						<li>女士睡衣</li>
-						<li>男士睡衣</li>
-						<li>套装睡衣</li>
-						<li>亲子装</li>
-						<li>情侣装</li>
-						<li>更多</li>
-						<li>顶部</li>
-					</ul>
-				</div> -->
-
 				<div class="sexImg">
 					<img src="../assets/ad10.jpg" alt="">
 				</div>
@@ -174,13 +161,13 @@
 			<p style="margin: 50px 20px 0 0;">更多></p>
 		</div>
 		<div class="floor5">
-		<div class="lovers_item" v-for="lovers in loversItem" :key="lovers.id">
-			<img :src="lovers.loversImg">
-			<div class="loversText">
-				<h2>{{lovers.loverstitle}}</h2>
-				<p>{{lovers.loverscontent}}</p>
+			<div class="lovers_item" v-for="lovers in loversItem" :key="lovers.id">
+				<img :src="lovers.loversImg">
+				<div class="loversText">
+					<h2>{{lovers.loverstitle}}</h2>
+					<p>{{lovers.loverscontent}}</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<!-- 情侣套装结束 -->
 
@@ -194,14 +181,14 @@
 			<p style="margin: 50px 20px 0 0;">更多></p>
 		</div>
 		<div class="floor6">
-		<div class="guess_item" v-for="guess in guessItem" :key="guess.id">
-			<img :src="guess.guessImg">
-			<div class="guessText">
-				<p>{{guess.guesstitle}}</p>
-				<p>{{guess.guesscontent}}</p>
+			<div class="guess_item" v-for="guess in guessItem" :key="guess.id">
+				<img :src="guess.guessImg">
+				<div class="guessText">
+					<p>{{guess.guesstitle}}</p>
+					<p class="red">{{guess.guesscontent}}</p>
+				</div>
+				<button>立即购买</button>
 			</div>
-			<button>立即购买</button>
-		</div>
 		</div>
 		<div class="girl">
 			<img src="../assets/ad10.jpg" alt="">
@@ -217,23 +204,7 @@
 		name: 'carousal',
 		data() {
 			return {
-				itemList: [{
-						id: 1,
-						carImg: require("../assets/ad10.jpg"),
-					},
-					{
-						id: 2,
-						carImg: require("../assets/ad10.jpg"),
-					},
-					{
-						id: 3,
-						carImg: require("../assets/ad10.jpg"),
-					},
-					{
-						id: 4,
-						carImg: require("../assets/ad10.jpg"),
-					}
-				],
+				itemList: null,
 				newsItem: [{
 						id: 1,
 						newsImg: require("../assets/ad10.jpg"),
@@ -418,7 +389,21 @@
 					},
 				],
 			}
-		}
+		},
+		methods: {
+			getBannerList() {
+				this.$http.get('http://192.168.31.211:8081/banner/getAll').then(function(data) {
+					// console.log(data)
+					// console.log(data.body.data)
+					this.itemList = data.body.data; //轮播图
+					// console.log(this.itemList)
+				});
+			},
+
+		},
+		mounted: function() {
+			this.getBannerList()
+		},
 	}
 </script>
 

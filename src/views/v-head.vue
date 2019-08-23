@@ -5,7 +5,7 @@
 				<div class="topLeft">
 					<p>欢迎来到康丽妍！</p>
 					<ul>
-						<li><a href="">请登录</a></li>
+						<li><a >请登录</a></li>
 						<li>|</li>
 						<li><a href="" style="color: red;">免费注册</a></li>
 					</ul>

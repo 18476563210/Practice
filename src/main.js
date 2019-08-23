@@ -5,6 +5,9 @@ import App from './App.vue'
 import router from './router'
 import './assets/total.css'
 
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
