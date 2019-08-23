@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
+	  <vMain></vMain>
+<!--    <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
-  </div>
+    <router-view/>-->
+  </div> 
 </template>
+
+<script>
+	import vMain from "./views/v-main.vue"
+	export default{
+		name:'App',
+		components:{
+			vMain
+		}
+	}
+</script>
 
 <style>
 #app {
